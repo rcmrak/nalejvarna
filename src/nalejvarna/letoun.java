@@ -1,5 +1,14 @@
 package nalejvarna;
+
 public class letoun {
+	/**
+	 * rozpeti, delka, plocha kridla, hmotnost
+	 * @param rozpeti
+	 * @param delka
+	 * @param plochaKridla
+	 * @param hmotnost
+	 */
+	
 	public letoun(int rozpeti, int delka, int plochaKridla, int hmotnost) {
 		super();
 		this.rozpeti = rozpeti;
@@ -11,8 +20,10 @@ public class letoun {
 	int delka;
 	int plochaKridla;
 	int hmotnost;
+	int brzDraha;
 	int plosneZatizeni;
 	int plochaVHangaru;
+	final int rychlost = 80;
 	
 	public int getRozpeti() {
 		return rozpeti;
@@ -37,6 +48,9 @@ public class letoun {
 	}
 	public void setHmotnost(int hmotnost) {
 		this.hmotnost = hmotnost;
+	}
+	public int getBrzDraha() {
+		return rychlost*hmotnost/350; //350 je jakoze konstatna zpomaleni
 	}
 	public int getPlosneZatizeni() {
 		return hmotnost/plochaKridla;
